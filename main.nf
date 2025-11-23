@@ -65,3 +65,4 @@ workflow {
     DIGENOME.out.csv.view { meta, csv -> "Digenome CSV: ${meta.id} -> ${csv}" }
     DIGENOME.out.log.view { meta, log -> "Digenome Log: ${meta.id} -> ${log}" }
 }
+

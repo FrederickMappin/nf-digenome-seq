@@ -2,7 +2,7 @@ process DIGENOME {
     tag "$meta.id"
     label 'process_single'
 
-    container 'digenome:latest'
+    container 'drfrederickmappin/digenome:latest'
 
     input:
     tuple val(meta), path(bam)
