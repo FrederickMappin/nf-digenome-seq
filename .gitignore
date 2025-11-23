@@ -1,0 +1,31 @@
+# Nextflow work directory
+work/
+
+# Results directory
+results/
+
+# Data files
+data/
+
+# Digenome mod directory (separate repo)
+digenome_mod/
+
+# Nextflow logs and cache
+.nextflow/
+.nextflow.log*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

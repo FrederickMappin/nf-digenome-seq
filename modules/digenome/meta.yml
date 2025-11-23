@@ -1,0 +1,50 @@
+name: digenome
+description: Analyze CRISPR off-target cleavage sites using Digenome-seq
+keywords:
+  - digenome
+  - crispr
+  - off-target
+  - cleavage
+tools:
+  - digenome:
+      description: Digenome-seq standalone tool for identifying genome-wide off-target sites
+      homepage: https://github.com/jgpark37/digenome
+      documentation: https://github.com/jgpark37/digenome
+      tool_dev_url: https://github.com/jgpark37/digenome
+      licence: ["MIT"]
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - bam:
+      type: file
+      description: Sorted BAM file from aligned reads
+      pattern: "*.bam"
+  - quality_threshold:
+      type: integer
+      description: Minimum mapping quality threshold
+
+output:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - csv:
+      type: file
+      description: CSV file with identified cleavage sites
+      pattern: "*.csv"
+  - log:
+      type: file
+      description: Log file with analysis summary
+      pattern: "*_digenome.log"
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+
+authors:
+  - "@your-username"

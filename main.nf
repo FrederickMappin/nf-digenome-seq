@@ -13,6 +13,7 @@ params.outdir = "results"
 params.fasta = "${projectDir}/data/reference/hg19_chr8.fa"
 params.bwa_index = "${projectDir}/data/reference"
 params.q = 0  // Quality threshold for digenome analysis
+params.overhang = 0  // Length of sticky end overhang
 
 /*
  * Main workflow
@@ -54,7 +55,8 @@ workflow {
     // Run Digenome analysis on aligned BAM files
     DIGENOME(
         BWA_MEM.out.bam,
-        params.q
+        params.q,
+        params.overhang
     )
 
     // View the outputs
