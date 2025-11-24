@@ -1,5 +1,5 @@
 
-## Nextflow implementation of digenome-seq
+#### Nextflow implementation of digenome-seq
 
 Steps: 
 - Fastqc
